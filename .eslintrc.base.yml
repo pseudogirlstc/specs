@@ -1,0 +1,147 @@
+root: true
+parser: "@typescript-eslint/parser"
+parserOptions:
+  ecmaVersion: 2020
+  sourceType: module
+  ecmaFeatures:
+    jsx: false
+  project:
+    - ./tsconfig.json
+env:
+  es6: true
+  node: true
+plugins:
+  - "@typescript-eslint"
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:node/recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:import/typescript
+  - standard
+settings:
+  import/internal-regex: '^[@#]/'
+rules:
+  node/no-unsupported-features/es-syntax:
+    - error
+    - ignores:
+        - modules
+  node/no-missing-import:
+    - off
+  comma-dangle:
+    - error
+    - always-multiline
+  max-statements-per-line:
+    - error
+    - max: 1
+  newline-after-var:
+    - error
+  newline-before-return:
+    - error
+  padding-line-between-statements:
+    - error
+  object-shorthand:
+    - error
+  no-multi-assign:
+    - error
+  no-nested-ternary:
+    - error
+  no-confusing-arrow:
+    - error
+  no-shadow:
+    - error
+  prefer-destructuring:
+    - error
+    - AssignmentExpression:
+        array: false
+        object: true
+  prefer-exponentiation-operator:
+    - error
+  prefer-numeric-literals:
+    - error
+  prefer-object-spread:
+    - error
+  prefer-template:
+    - error
+  prefer-reflect:
+    - error
+  no-console:
+    - warn
+  object-curly-newline:
+    - error
+    - ObjectExpression:
+        multiline: true
+        minProperties: 1
+        consistent: true
+      ObjectPattern: never
+      ImportDeclaration: never
+      ExportDeclaration: never
+  object-property-newline:
+    - error
+    - allowAllPropertiesOnSameLine: false
+  '@typescript-eslint/explicit-function-return-type':
+    - error
+    - allowExpressions: true
+  'no-useless-constructor':
+    - off
+  '@typescript-eslint/no-useless-constructor':
+    - error
+  '@typescript-eslint/no-unused-vars':
+    - error
+    - vars: all
+      args: after-used
+      ignoreRestSiblings: true
+  '@typescript-eslint/camelcase':
+    - off
+  '@typescript-eslint/naming-convention':
+    - error
+    - selector: default
+      format:
+        - camelCase
+    - selector: variable
+      format:
+        - camelCase
+        - UPPER_CASE
+      leadingUnderscore: allow
+    - selector: parameter
+      format:
+        - camelCase
+      leadingUnderscore: allow
+    - selector: memberLike
+      format:
+        - camelCase
+        - snake_case
+        - PascalCase
+        - UPPER_CASE
+    - selector: typeLike
+      format:
+        - PascalCase
+  'import/no-unresolved':
+    - off
+  'import/first':
+    - error
+  'import/order':
+    - error
+    - groups:
+        - builtin
+        - external
+        - internal
+        - parent
+        - sibling
+        - index
+      alphabetize:
+        order: asc
+        caseInsensitive: true
+  'import/newline-after-import':
+    - error
+  'import/default':
+    - off
+overrides:
+  - files:
+      - "**/tools/**/*.ts"
+      - "**/tests/**/*.ts"
+    rules:
+      no-console:
+        - off
