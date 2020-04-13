@@ -55,3 +55,6 @@ const uneco: Domain = {
 }
 
 assertValid(uneco, domain)
+
+process.stdout.write(JSON.stringify(uneco, null, 2))
+process.stdout.write('\n')
