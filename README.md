@@ -1,1 +1,1 @@
-![Pseudo Girls Technical Committee](https://pseudo-girls.technical-committee.com/banners/white@2x.png)
+<img src="https://pseudo-girls.technical-committee.com/banners/white@2x.png" width="200px" height="40px">
