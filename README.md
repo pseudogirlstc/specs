@@ -1,1 +1,1 @@
-![Internet Girls Technical Committee](https://internet-girls.technical-committee.com/banners/igtc@2x.png)
+![Pseudo Girls Technical Committee](https://pseudo-girls.technical-committee.com/banners/white@2x.png)
