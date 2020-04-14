@@ -8,7 +8,7 @@ export const domain = defineSchema()
     description: 'Version of IGTF Domain Registration Specs',
   })
   .string('name', {
-    description: 'Domain name to register to IGTC',
+    description: 'Domain name to register to PGTC',
     examples: [
       'u-ne.co',
     ],
